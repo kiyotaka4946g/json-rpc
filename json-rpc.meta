@@ -1,0 +1,8 @@
+((egg "json-rpc.egg")
+ (synopsis "JSON RPC client/server implementation")
+ (category web)
+ (needs medea mailbox-threads)
+ (test-depends test)
+ (doc-from-wiki)
+ (license "BSD")
+ (author "Tim van der Linden"))

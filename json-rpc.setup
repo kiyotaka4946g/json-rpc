@@ -1,0 +1,8 @@
+(compile -s -O2 -d1 json-rpc-client.scm -j json-rpc-client)
+(compile -s json-rpc-client.import.scm -O2 -d0)
+
+(install-extension
+ 'json-rpc
+ '("json-rpc-client.so" "json-rpc-client.import.so")
+ '((version "0.1.7.1")
+   (documentation "json-rpc.html")))
