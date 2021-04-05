@@ -1,0 +1,11 @@
+((synopsis "JSON RPC client/server implementation")
+ (version "0.1.8")
+ (category web)
+ (license "BSD")
+ (dependencies medea mailbox-threads)
+ (test-dependencies test)
+ (author "Tim van der Linden")
+ (components
+  (extension json-rpc-client)))
+  ; (source "json-rpc-client.scm"))))
+

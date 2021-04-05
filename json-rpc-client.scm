@@ -34,8 +34,13 @@
 (module json-rpc-client
   (json-rpc-server)
 
-(import chicken scheme)
-(use medea extras srfi-1 data-structures mailbox-threads)
+(import scheme)
+
+(cond-expand
+  (chicken-4 (import chicken)
+    (use medea extras srfi-1 data-structures mailbox-threads))
+  (chicken-5 (import (chicken base) chicken.condition chicken.format chicken.keyword)
+    (import medea srfi-1 mailbox-threads)))
 
 ; Setup the custom error handlers
 (define (server-setup-arguments-error type expected given)
